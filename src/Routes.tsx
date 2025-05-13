@@ -14,14 +14,14 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <ProjectsPage /> },
       { path: "jsonlite", element: <JsonLite /> },
-      {
-        path: "jsonlite/javadocs",
-        element: <JavaDocs path="/javadocs/jsonlite/index.html" />,
-      },
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "*", element: <NotFoundPage /> },
     ],
+  },
+  {
+    path: "jsonlite/javadocs",
+    element: <JavaDocs path="/javadocs/jsonlite/index.html" />,
   },
 ]);
 

@@ -10,10 +10,9 @@ const JavaDocs = ({ path }: { path: string }) => {
         width: "100vw",
         height: "100vh",
         border: "none",
-        margin: 0,
-        padding: 0,
-        overflow: "hidden",
-        zIndex: 9999,
+        transition: "opacity 0.3s ease-in-out",
+        backgroundColor: "white",
+        zIndex: 1,
       }}
     />
   );

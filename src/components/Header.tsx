@@ -1,26 +1,21 @@
-import { AppBar, Box, Button, Toolbar } from "@mui/material";
+import { AppBar, Box, Button, Toolbar, useMediaQuery } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { Link, NavLink } from "react-router-dom";
 import { appBarMenu } from "../constants/appBar";
 import { colors } from "../constants/colors";
 
 const Header = () => {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm")); // <600px
+
   return (
     <AppBar position="static" sx={{ bgcolor: colors.background }}>
       <Toolbar>
         <Link to={"/"}>
-          {/* Full Logo for medium+ screens */}
           <img
-            src="/icons/full-logo.png"
-            alt="Full Logo"
-            style={{ height: 70 }}
-            className="full-logo"
-          />
-          {/* Compact Logo for small screens */}
-          <img
-            src="/icons/logo.png"
-            alt="Compact Logo"
-            style={{ height: 50 }}
-            className="compact-logo"
+            src={isSmallScreen ? "/icons/logo.png" : "/icons/full-logo.png"}
+            alt="Logo"
+            style={{ height: isSmallScreen ? 50 : 70, display: "block" }}
           />
         </Link>
 
@@ -44,25 +39,6 @@ const Header = () => {
           </Button>
         ))}
       </Toolbar>
-
-      <style>
-        {`
-          .full-logo {
-            display: none;
-          }
-          .compact-logo {
-            display: block;
-          }
-          @media (min-width: 600px) {
-            .full-logo {
-              display: block;
-            }
-            .compact-logo {
-              display: none;
-            }
-          }
-        `}
-      </style>
     </AppBar>
   );
 };

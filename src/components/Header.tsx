@@ -8,7 +8,11 @@ const Header = () => {
     <AppBar position="static" sx={{ bgcolor: colors.background }}>
       <Toolbar>
         <Link to={"/"}>
-          <img src="/full-logo.png" alt="Company Logo" style={{ height: 70 }} />
+          <img
+            src="/icons/full-logo.png"
+            alt="Company Logo"
+            style={{ height: 70 }}
+          />
         </Link>
 
         <Box sx={{ flexGrow: 1 }} />

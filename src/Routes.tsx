@@ -1,10 +1,11 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import JavaDocs from "./components/JavaDocs";
 import Layout from "./components/Layout";
 import AboutPage from "./routes/AboutPage";
+import ContactPage from "./routes/ContactPage";
 import NotFoundPage from "./routes/NotFoundPage";
 import ProjectsPage from "./routes/ProjectsPage";
 import JsonLite from "./routes/projects/JsonLite";
-import ContactPage from "./routes/ContactPage";
 
 const router = createBrowserRouter([
   {
@@ -13,6 +14,10 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <ProjectsPage /> },
       { path: "jsonlite", element: <JsonLite /> },
+      {
+        path: "jsonlite/javadocs",
+        element: <JavaDocs path="/javadocs/jsonlite/index.html" />,
+      },
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "*", element: <NotFoundPage /> },

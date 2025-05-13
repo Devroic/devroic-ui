@@ -22,7 +22,7 @@ const JsonLite = () => {
       </Link>
       <br />
       <Link
-        href="/jsonlite/docs"
+        href="/jsonlite/javadocs"
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "#90caf9", textTransform: "none" }}

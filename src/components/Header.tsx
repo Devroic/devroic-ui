@@ -8,14 +8,24 @@ const Header = () => {
     <AppBar position="static" sx={{ bgcolor: colors.background }}>
       <Toolbar>
         <Link to={"/"}>
+          {/* Full Logo for medium+ screens */}
           <img
             src="/icons/full-logo.png"
-            alt="Company Logo"
+            alt="Full Logo"
             style={{ height: 70 }}
+            className="full-logo"
+          />
+          {/* Compact Logo for small screens */}
+          <img
+            src="/icons/logo.png"
+            alt="Compact Logo"
+            style={{ height: 50 }}
+            className="compact-logo"
           />
         </Link>
 
         <Box sx={{ flexGrow: 1 }} />
+
         {appBarMenu.map((tab, idx) => (
           <Button
             key={idx}
@@ -25,7 +35,7 @@ const Header = () => {
               color: "white",
               mx: 1,
               "&.active": {
-                borderBottom: `2px solid ${colors.logoRed}}`,
+                borderBottom: `2px solid ${colors.logoRed}`,
                 fontWeight: "bold",
               },
             }}
@@ -34,6 +44,25 @@ const Header = () => {
           </Button>
         ))}
       </Toolbar>
+
+      <style>
+        {`
+          .full-logo {
+            display: none;
+          }
+          .compact-logo {
+            display: block;
+          }
+          @media (min-width: 600px) {
+            .full-logo {
+              display: block;
+            }
+            .compact-logo {
+              display: none;
+            }
+          }
+        `}
+      </style>
     </AppBar>
   );
 };

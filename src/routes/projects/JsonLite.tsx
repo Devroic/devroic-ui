@@ -105,7 +105,7 @@ const JsonLite = () => {
         Add Dependency: Begin by adding the JsonLite Library as a dependency in
         your project. Find the latest version on{" "}
         <Link
-          href="https://central.sonatype.com/artifact/com.techbasecore/jsonlite/versions"
+          href="https://central.sonatype.com/artifact/com.devroic/jsonlite/versions"
           target="_blank"
           rel="noopener noreferrer"
           color={colors.lightBlue}
@@ -117,13 +117,13 @@ const JsonLite = () => {
       <Typography variant="subtitle1">Maven</Typography>
       <CodeBlock language="xml">{`
 <dependency>
-  <groupId>com.techbasecore</groupId>
+  <groupId>com.devroic</groupId>
   <artifactId>jsonlite</artifactId>
   <version>1.0.0</version>
 </dependency>`}</CodeBlock>
       <Typography variant="subtitle1">Gradle</Typography>
       <CodeBlock language="groovy">{`
-implementation group: 'com.techbasecore', name: 'jsonlite', version: '1.0.0'`}</CodeBlock>
+implementation group: 'com.devroic', name: 'jsonlite', version: '1.0.0'`}</CodeBlock>
       <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
       <Typography variant="h6" gutterBottom>
         Usage

@@ -23,7 +23,9 @@ const router = createBrowserRouter([
   },
   {
     path: "jsonlite/javadocs",
-    element: <JavaDocs path="/javadocs/jsonlite/index.html" />,
+    element: (
+      <JavaDocs path="/javadocs/jsonlite/index.html" backTo="/jsonlite" />
+    ),
   },
 ]);
 

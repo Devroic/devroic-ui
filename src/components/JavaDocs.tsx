@@ -1,7 +1,9 @@
 import { useState } from "react";
-import { Box, CircularProgress } from "@mui/material";
+import { Box, Button, CircularProgress } from "@mui/material";
+import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { Link } from "react-router-dom";
 
-const JavaDocs = ({ path }: { path: string }) => {
+const JavaDocs = ({ path, backTo }: { path: string; backTo: string }) => {
   const [loaded, setLoaded] = useState(false);
 
   return (
@@ -31,6 +33,25 @@ const JavaDocs = ({ path }: { path: string }) => {
           transition: "opacity 0.3s ease-in-out",
         }}
       />
+      <Button
+        component={Link}
+        to={backTo}
+        startIcon={<ArrowBackIcon />}
+        variant="contained"
+        size="small"
+        sx={{
+          position: "fixed",
+          top: 12,
+          left: 12,
+          bgcolor: "primary.main",
+          color: "#000",
+          fontWeight: 600,
+          textTransform: "none",
+          boxShadow: 3,
+        }}
+      >
+        Back to Devroic
+      </Button>
     </Box>
   );
 };

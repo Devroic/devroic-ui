@@ -1,10 +1,3 @@
 com.devroic.jsonlite
-com.devroic.jsonlite.base
 com.devroic.jsonlite.client
 com.devroic.jsonlite.exceptions
-com.devroic.jsonlite.messages
-com.devroic.jsonlite.model
-com.devroic.jsonlite.operations
-com.devroic.jsonlite.operations.impl
-com.devroic.jsonlite.operations.interfaces
-com.devroic.jsonlite.utils

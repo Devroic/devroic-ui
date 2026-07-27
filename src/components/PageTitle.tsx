@@ -1,5 +1,4 @@
 import { Typography, Box } from "@mui/material";
-import { colors } from "../constants/colors";
 
 const PageTitle = ({ children }: { children: React.ReactNode }) => (
   <Box sx={{ mb: 4 }}>
@@ -9,7 +8,8 @@ const PageTitle = ({ children }: { children: React.ReactNode }) => (
       sx={{
         fontWeight: "bold",
         color: "white",
-        borderBottom: `2px solid ${colors.logoRed}`,
+        borderBottom: "2px solid",
+        borderColor: "secondary.main",
         display: "inline-block",
         pb: 0.5,
       }}

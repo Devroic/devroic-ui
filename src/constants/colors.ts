@@ -7,4 +7,5 @@ export const colors = {
   "Mobile Application": "#66bb6a",
   "Web Application": "#ef5350",
   "Java Library": "#1976d2",
+  "Machine Learning": "#ab47bc",
 };

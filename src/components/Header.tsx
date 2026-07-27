@@ -2,19 +2,18 @@ import { AppBar, Box, Button, Toolbar, useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { Link, NavLink } from "react-router-dom";
 import { appBarMenu } from "../constants/appBar";
-import { colors } from "../constants/colors";
 
 const Header = () => {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm")); // <600px
 
   return (
-    <AppBar position="static" sx={{ bgcolor: colors.background }}>
+    <AppBar position="static" sx={{ bgcolor: "background.default" }}>
       <Toolbar>
-        <Link to={"/"}>
+        <Link to={"/"} aria-label="Devroic home">
           <img
             src={isSmallScreen ? "/icons/logo.png" : "/icons/full-logo.png"}
-            alt="Logo"
+            alt="Devroic logo"
             style={{ height: isSmallScreen ? 50 : 70, display: "block" }}
           />
         </Link>
@@ -30,7 +29,8 @@ const Header = () => {
               color: "white",
               mx: 1,
               "&.active": {
-                borderBottom: `2px solid ${colors.logoRed}`,
+                borderBottom: "2px solid",
+                borderColor: "secondary.main",
                 fontWeight: "bold",
               },
             }}

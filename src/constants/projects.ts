@@ -8,4 +8,11 @@ export const projects: Project[] = [
     path: "/jsonlite",
     type: "Java Library",
   },
+  {
+    title: "Tooth Segmentation",
+    description:
+      "Binary and multi-class tooth segmentation for panoramic dental radiographs, with a clinical UI showing per-tooth FDI numbering and confidence.",
+    path: "/tooth-segmentation",
+    type: "Machine Learning",
+  },
 ];

@@ -6,7 +6,6 @@ import {
   Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { colors } from "../constants/colors";
 import { Project } from "../constants/interfaces";
 import ProjectLabel from "./ProjectLabel";
 
@@ -14,8 +13,22 @@ const ProjectCard = ({ project }: { project: Project }) => {
   const navigate = useNavigate();
 
   return (
-    <Card sx={{ width: 350, bgcolor: colors.card, color: "white" }}>
-      <CardContent>
+    <Card
+      sx={{
+        width: "100%",
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        bgcolor: "background.paper",
+        color: "white",
+        transition: "transform 0.2s ease, box-shadow 0.2s ease",
+        "&:hover": {
+          transform: "translateY(-4px)",
+          boxShadow: 6,
+        },
+      }}
+    >
+      <CardContent sx={{ flexGrow: 1 }}>
         <ProjectLabel type={project.type} />
         <Typography gutterBottom variant="h5" component="div">
           {project.title}
@@ -27,7 +40,7 @@ const ProjectCard = ({ project }: { project: Project }) => {
       <CardActions>
         <Button
           size="small"
-          sx={{ color: colors.lightBlue }}
+          sx={{ color: "primary.main" }}
           onClick={() => {
             navigate(project.path);
           }}

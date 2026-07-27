@@ -1,20 +1,37 @@
+import { useState } from "react";
+import { Box, CircularProgress } from "@mui/material";
+
 const JavaDocs = ({ path }: { path: string }) => {
+  const [loaded, setLoaded] = useState(false);
+
   return (
-    <iframe
-      src={path}
-      title="HTML File"
-      style={{
-        position: "fixed",
-        top: 0,
-        left: 0,
-        width: "100vw",
-        height: "100vh",
-        border: "none",
-        transition: "opacity 0.3s ease-in-out",
-        backgroundColor: "white",
-        zIndex: 1,
-      }}
-    />
+    <Box sx={{ position: "fixed", inset: 0, bgcolor: "background.default" }}>
+      {!loaded && (
+        <Box
+          sx={{
+            position: "absolute",
+            inset: 0,
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+          }}
+        >
+          <CircularProgress sx={{ color: "primary.main" }} />
+        </Box>
+      )}
+      <iframe
+        src={path}
+        title="JavaDocs"
+        onLoad={() => setLoaded(true)}
+        style={{
+          width: "100%",
+          height: "100%",
+          border: "none",
+          opacity: loaded ? 1 : 0,
+          transition: "opacity 0.3s ease-in-out",
+        }}
+      />
+    </Box>
   );
 };
 

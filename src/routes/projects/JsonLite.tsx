@@ -3,9 +3,11 @@ import { Box, Divider, Link, Typography } from "@mui/material";
 import CodeBlock from "../../components/CodeBlock";
 import PageTitle from "../../components/PageTitle";
 import ProjectLabel from "../../components/ProjectLabel";
-import { colors } from "../../constants/colors";
+import useDocumentTitle from "../../hooks/useDocumentTitle";
 
 const JsonLite = () => {
+  useDocumentTitle("JsonLite");
+
   return (
     <>
       <ProjectLabel type="Java Library" />
@@ -15,7 +17,7 @@ const JsonLite = () => {
         href="https://github.com/Devroic/jsonlite"
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "#90caf9", textTransform: "none" }}
+        sx={{ color: "primary.main", textTransform: "none" }}
       >
         {" "}
         Source Code <OpenInNewIcon fontSize="inherit" />
@@ -25,7 +27,7 @@ const JsonLite = () => {
         href="/jsonlite/javadocs"
         target="_blank"
         rel="noopener noreferrer"
-        sx={{ color: "#90caf9", textTransform: "none" }}
+        sx={{ color: "primary.main", textTransform: "none" }}
       >
         Docs <OpenInNewIcon fontSize="inherit" />
       </Link>
@@ -46,7 +48,7 @@ const JsonLite = () => {
         allowing users to serialize objects to JSON, deserialize JSON to
         objects, and validate and manipulate JSON data.
       </Typography>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>
         Features
       </Typography>
@@ -61,7 +63,7 @@ const JsonLite = () => {
           Reflective operations for working with Java objects and their fields.
         </li>
       </ul>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>
         Prerequisites
       </Typography>
@@ -73,7 +75,7 @@ const JsonLite = () => {
           href="https://www.oracle.com/java/technologies/downloads/"
           target="_blank"
           rel="noopener noreferrer"
-          color={colors.lightBlue}
+          sx={{ color: "primary.main" }}
         >
           official Oracle website
         </Link>{" "}
@@ -82,7 +84,7 @@ const JsonLite = () => {
           href="https://brew.sh/"
           target="_blank"
           rel="noopener noreferrer"
-          color={colors.lightBlue}
+          sx={{ color: "primary.main" }}
         >
           Homebrew
         </Link>{" "}
@@ -91,13 +93,13 @@ const JsonLite = () => {
           href="https://sdkman.io/"
           target="_blank"
           rel="noopener noreferrer"
-          color={colors.lightBlue}
+          sx={{ color: "primary.main" }}
         >
           SDKMAN!
         </Link>{" "}
         for Unix-based systems.
       </Typography>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>
         Getting Started
       </Typography>
@@ -108,7 +110,7 @@ const JsonLite = () => {
           href="https://central.sonatype.com/artifact/com.devroic/jsonlite/versions"
           target="_blank"
           rel="noopener noreferrer"
-          color={colors.lightBlue}
+          sx={{ color: "primary.main" }}
         >
           Maven Central
         </Link>
@@ -124,7 +126,7 @@ const JsonLite = () => {
       <Typography variant="subtitle1">Gradle</Typography>
       <CodeBlock language="groovy">{`
 implementation group: 'com.devroic', name: 'jsonlite', version: '1.0.0'`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>
         Usage
       </Typography>
@@ -160,7 +162,7 @@ JsonLiteClient client = JsonLiteClient.builder()
   .idKey("id")
   .createFileIfNotExists(true)
   .build();`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6">Select Operations</Typography>
       <br />
       <Typography variant="subtitle1">selectAll()</Typography>
@@ -189,7 +191,7 @@ List<Person> people = client.selectByKey("name", "Test");`}</CodeBlock>
 List<Person> people = client.selectWhere(
   object -> ((Person) object).getName().equals("Test")
 );`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6">Insert Operations</Typography>
       <br />
       <Typography variant="subtitle1">insert()</Typography>
@@ -204,7 +206,7 @@ Person person1 = new Person();
 Person person2 = new Person();
 List<Person> people = Arrays.asList(person1, person2);
 boolean insertMultipleResult = client.insertMultiple(people);`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6">Update Operations</Typography>
       <br />
       <Typography variant="subtitle1">updateKey()</Typography>
@@ -236,7 +238,7 @@ boolean updateResultMultiple = client.updateWhere(
   object -> ((Person) object).getName().equals("Test"),
   updates
 );`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6">Delete Operations</Typography>
       <br />
       <Typography variant="subtitle1">deleteAll()</Typography>
@@ -257,7 +259,7 @@ boolean deleteResult = client.deleteByKey("name", "Test");`}</CodeBlock>
 boolean deleteResult = client.deleteWhere(
   object -> ((Person) object).getName().equals("Test")
 );`}</CodeBlock>
-      <Divider sx={{ my: 4, borderColor: colors.lightBlue }} />
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>
         License
       </Typography>
@@ -269,7 +271,7 @@ boolean deleteResult = client.deleteWhere(
           href="https://www.gnu.org/licenses/gpl-3.0.en.html"
           target="_blank"
           rel="noopener noreferrer"
-          color={colors.lightBlue}
+          sx={{ color: "primary.main" }}
         >
           GNU General Public License v3.0
         </Link>{" "}

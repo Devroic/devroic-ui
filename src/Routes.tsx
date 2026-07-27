@@ -6,6 +6,7 @@ import ContactPage from "./routes/ContactPage";
 import NotFoundPage from "./routes/NotFoundPage";
 import ProjectsPage from "./routes/ProjectsPage";
 import JsonLite from "./routes/projects/JsonLite";
+import ToothSegmentation from "./routes/projects/ToothSegmentation";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <ProjectsPage /> },
       { path: "jsonlite", element: <JsonLite /> },
+      { path: "tooth-segmentation", element: <ToothSegmentation /> },
       { path: "about", element: <AboutPage /> },
       { path: "contact", element: <ContactPage /> },
       { path: "*", element: <NotFoundPage /> },

@@ -12,7 +12,7 @@ const JsonLite = () => {
       <PageTitle>JsonLite</PageTitle>
 
       <Link
-        href="https://github.com/andreaseracleous99/jsonlite"
+        href="https://github.com/Devroic/jsonlite"
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "#90caf9", textTransform: "none" }}

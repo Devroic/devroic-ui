@@ -1,4 +1,5 @@
 import { Box, Typography, IconButton, Stack } from "@mui/material";
+import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
@@ -15,7 +16,7 @@ const Footer = () => (
     <Stack direction="row" spacing={2} justifyContent="center" mb={0.5}>
       <IconButton
         component="a"
-        href="https://github.com/andreaseracleous99"
+        href="https://github.com/devroic"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="GitHub profile"
@@ -32,6 +33,14 @@ const Footer = () => (
         sx={{ color: "primary.main", p: 0.5 }}
       >
         <LinkedInIcon fontSize="small" />
+      </IconButton>
+      <IconButton
+        component="a"
+        href="mailto:andreas.eracleous99@hotmail.com"
+        aria-label="Send an email"
+        sx={{ color: "primary.main", p: 0.5 }}
+      >
+        <EmailIcon fontSize="small" />
       </IconButton>
     </Stack>
     <Typography variant="caption" color="gray">

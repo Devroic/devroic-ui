@@ -11,6 +11,7 @@ import {
   TableRow,
   Typography,
 } from "@mui/material";
+import CodeBlock from "../../components/CodeBlock";
 import PageTitle from "../../components/PageTitle";
 import ProjectLabel from "../../components/ProjectLabel";
 import useDocumentTitle from "../../hooks/useDocumentTitle";
@@ -24,7 +25,7 @@ const ToothSegmentation = () => {
       <PageTitle>Tooth Segmentation</PageTitle>
 
       <Link
-        href="https://github.com/Devroic/ai-tooth-segmentation"
+        href="https://github.com/Devroic/tooth-segmentation"
         target="_blank"
         rel="noopener noreferrer"
         sx={{ color: "primary.main", textTransform: "none" }}
@@ -123,6 +124,22 @@ const ToothSegmentation = () => {
           </Typography>
         </li>
       </Box>
+
+      <Divider sx={{ my: 4, borderColor: "primary.main" }} />
+      <Typography variant="h6" gutterBottom>
+        Try It
+      </Typography>
+      <Typography variant="body1">
+        A prebuilt image is on GitHub Container Registry - no cloning, no
+        model downloads, no Python setup:
+      </Typography>
+      <CodeBlock language="bash">{`
+docker run -p 8000:8000 ghcr.io/devroic/tooth-seg`}</CodeBlock>
+      <Typography variant="body1">
+        Open <strong>localhost:8000</strong>, upload a panoramic X-ray, and
+        it returns the annotated radiograph, a color-coded odontogram, and a
+        downloadable PDF report.
+      </Typography>
 
       <Divider sx={{ my: 4, borderColor: "primary.main" }} />
       <Typography variant="h6" gutterBottom>

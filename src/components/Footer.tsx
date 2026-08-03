@@ -26,7 +26,7 @@ const Footer = () => (
       </IconButton>
       <IconButton
         component="a"
-        href="https://www.linkedin.com/in/andreas-eracleous-17418a240/"
+        href="https://www.linkedin.com/in/andreaseracleous99/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="LinkedIn profile"

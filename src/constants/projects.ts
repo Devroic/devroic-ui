@@ -15,4 +15,11 @@ export const projects: Project[] = [
     path: "/tooth-segmentation",
     type: "Machine Learning",
   },
+  {
+    title: "Shiftly",
+    description:
+      "A mobile calendar app for people who work rotating day and night shifts, with repeating shift patterns, custom shift types, and everyday events - all stored locally on the device.",
+    path: "/shiftly",
+    type: "Mobile Application",
+  },
 ];

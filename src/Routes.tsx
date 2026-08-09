@@ -5,6 +5,7 @@ import AboutPage from "./routes/AboutPage";
 import NotFoundPage from "./routes/NotFoundPage";
 import ProjectsPage from "./routes/ProjectsPage";
 import JsonLite from "./routes/projects/JsonLite";
+import Shiftly from "./routes/projects/Shiftly";
 import ToothSegmentation from "./routes/projects/ToothSegmentation";
 
 const router = createBrowserRouter([
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
       { path: "/", element: <ProjectsPage /> },
       { path: "jsonlite", element: <JsonLite /> },
       { path: "tooth-segmentation", element: <ToothSegmentation /> },
+      { path: "shiftly", element: <Shiftly /> },
       { path: "about", element: <AboutPage /> },
       { path: "*", element: <NotFoundPage /> },
     ],

@@ -72,7 +72,8 @@ const Shiftly = () => {
         Getting Started
       </Typography>
       <Typography variant="body1">
-        Requires Node.js 20+ and the Expo Go app on your phone:
+        Want to run Shiftly from source instead of installing it as a built
+        app? Requires Node.js 20+ and the Expo Go app on your phone:
       </Typography>
       <CodeBlock language="bash">{`
 npm install

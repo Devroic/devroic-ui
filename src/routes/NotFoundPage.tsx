@@ -18,7 +18,7 @@ const NotFoundPage = () => {
       <Typography variant="h4" gutterBottom>
         404 - Page Not Found
       </Typography>
-      <Typography variant="body1" gutterBottom color="gray">
+      <Typography variant="body1" gutterBottom color="text.secondary">
         Sorry, the page you’re looking for doesn’t exist.
       </Typography>
       <Button

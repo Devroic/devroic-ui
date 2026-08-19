@@ -78,7 +78,7 @@ const Shiftly = () => {
       <CodeBlock language="bash">{`
 npm install
 npx expo start`}</CodeBlock>
-      <Typography variant="body2" color="gray">
+      <Typography variant="body2" color="text.secondary">
         Scan the QR code with Expo Go, or press i / a in the terminal to
         launch an iOS/Android simulator.
       </Typography>

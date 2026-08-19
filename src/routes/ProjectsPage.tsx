@@ -15,8 +15,7 @@ const ProjectsPage = () => {
         </Typography>
         <Typography variant="body1" color="text.secondary" sx={{ mt: 1 }}>
           I'm a Full Stack Software Developer. This is where I publish the
-          projects I build on the side - Java libraries, mobile apps, and
-          machine learning experiments included.
+          projects I build on the side.
         </Typography>
       </Box>
       <PageTitle>Projects</PageTitle>

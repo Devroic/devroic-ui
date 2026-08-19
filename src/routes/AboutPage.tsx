@@ -1,7 +1,4 @@
-import EmailIcon from "@mui/icons-material/Email";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, Button, Chip, Stack, Typography } from "@mui/material";
+import { Box, Chip, Stack, Typography } from "@mui/material";
 import PageTitle from "../components/PageTitle";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
@@ -56,17 +53,13 @@ const AboutPage = () => {
           What I Build
         </Typography>
         <Typography variant="body1" color="text.secondary" paragraph>
-          Devroic is where I publish that work. So far that includes{" "}
-          <strong>JsonLite</strong>, a Java library for treating a JSON file
-          as a lightweight queryable data store; <strong>Shiftly</strong>, a
-          local-first mobile calendar app for shift workers; and{" "}
-          <strong>Tooth Segmentation</strong>, a YOLOv8-based computer vision
-          pipeline that segments and numbers teeth in dental X-rays behind a
-          clinical web UI. You can find all three on the{" "}
+          Devroic is where I publish that work - libraries, apps, and
+          experiments across whatever stack fits the problem. Have a look at
+          the{" "}
           <Box component="a" href="/" sx={{ color: "primary.main" }}>
             Projects
           </Box>{" "}
-          page.
+          page to see what's currently up.
         </Typography>
       </Box>
 
@@ -101,46 +94,6 @@ const AboutPage = () => {
               </Stack>
             </Box>
           ))}
-        </Stack>
-      </Box>
-
-      <Box sx={{ my: 5 }}>
-        <Typography variant="h6" gutterBottom>
-          Get in Touch
-        </Typography>
-        <Typography variant="body1" color="text.secondary" paragraph>
-          Happy to talk about a project, a bug you found, or anything in
-          between.
-        </Typography>
-        <Stack direction="row" spacing={1.5} flexWrap="wrap">
-          <Button
-            variant="outlined"
-            startIcon={<EmailIcon />}
-            href="mailto:info@devroic.com"
-            sx={{ color: "primary.main", borderColor: "primary.main" }}
-          >
-            Email
-          </Button>
-          <Button
-            variant="outlined"
-            startIcon={<GitHubIcon />}
-            href="https://github.com/devroic"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ color: "primary.main", borderColor: "primary.main" }}
-          >
-            GitHub
-          </Button>
-          <Button
-            variant="outlined"
-            startIcon={<LinkedInIcon />}
-            href="https://www.linkedin.com/in/andreaseracleous99/"
-            target="_blank"
-            rel="noopener noreferrer"
-            sx={{ color: "primary.main", borderColor: "primary.main" }}
-          >
-            LinkedIn
-          </Button>
         </Stack>
       </Box>
     </>

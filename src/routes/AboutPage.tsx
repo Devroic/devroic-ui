@@ -56,7 +56,7 @@ const AboutPage = () => {
           Devroic is where I publish that work - libraries, apps, and
           experiments across whatever stack fits the problem. Have a look at
           the{" "}
-          <Box component="a" href="/" sx={{ color: "primary.main" }}>
+          <Box component="a" href="/projects" sx={{ color: "primary.main" }}>
             Projects
           </Box>{" "}
           page to see what's currently up.

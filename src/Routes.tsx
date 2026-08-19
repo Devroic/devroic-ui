@@ -2,6 +2,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import JavaDocs from "./components/JavaDocs";
 import Layout from "./components/Layout";
 import AboutPage from "./routes/AboutPage";
+import HomePage from "./routes/HomePage";
 import NotFoundPage from "./routes/NotFoundPage";
 import ProjectsPage from "./routes/ProjectsPage";
 import JsonLite from "./routes/projects/JsonLite";
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <Layout />,
     children: [
-      { path: "/", element: <ProjectsPage /> },
+      { path: "/", element: <HomePage /> },
+      { path: "projects", element: <ProjectsPage /> },
       { path: "jsonlite", element: <JsonLite /> },
       { path: "tooth-segmentation", element: <ToothSegmentation /> },
       { path: "shiftly", element: <Shiftly /> },

@@ -1,4 +1,4 @@
 export const appBarMenu = [
-  { to: "/", label: "Projects" },
+  { to: "/projects", label: "Projects" },
   { to: "/about", label: "About" },
 ];

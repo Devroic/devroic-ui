@@ -61,12 +61,12 @@ const ToothSegmentation = () => {
         <Table size="small">
           <TableHead>
             <TableRow>
-              <TableCell sx={{ color: "gray" }}>Model</TableCell>
-              <TableCell sx={{ color: "gray" }}>Epochs</TableCell>
-              <TableCell sx={{ color: "gray" }}>Precision</TableCell>
-              <TableCell sx={{ color: "gray" }}>Recall</TableCell>
-              <TableCell sx={{ color: "gray" }}>mAP50</TableCell>
-              <TableCell sx={{ color: "gray" }}>mAP50-95</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>Model</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>Epochs</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>Precision</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>Recall</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>mAP50</TableCell>
+              <TableCell sx={{ color: "text.secondary" }}>mAP50-95</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -89,7 +89,7 @@ const ToothSegmentation = () => {
           </TableBody>
         </Table>
       </TableContainer>
-      <Typography variant="body2" color="gray" sx={{ mt: 1 }}>
+      <Typography variant="body2" color="text.secondary" sx={{ mt: 1 }}>
         Evaluated on a held-out test split. Every one of the 32 FDI classes
         scores mask mAP50 between 0.66 and 0.95 - no class collapses to
         near-zero, though third-molar/wisdom-tooth classes are the weakest,

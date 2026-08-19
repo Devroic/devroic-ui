@@ -1,4 +1,4 @@
-import { Grid } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 import PageTitle from "../components/PageTitle";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../constants/projects";
@@ -9,6 +9,16 @@ const ProjectsPage = () => {
 
   return (
     <>
+      <Box sx={{ mb: 4 }}>
+        <Typography variant="h5" component="p" sx={{ fontWeight: 600 }}>
+          Hi, I'm Andreas 👋
+        </Typography>
+        <Typography variant="body1" color="text.secondary" sx={{ mt: 1 }}>
+          I'm a Full Stack Software Developer. This is where I publish the
+          projects I build on the side - Java libraries, mobile apps, and
+          machine learning experiments included.
+        </Typography>
+      </Box>
       <PageTitle>Projects</PageTitle>
       <Grid container spacing={4} alignItems="stretch">
         {projects.map((project) => (

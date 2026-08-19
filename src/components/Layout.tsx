@@ -10,10 +10,8 @@ const Layout = () => (
     <ScrollToTop />
     <Header />
     <Box component="main" sx={{ flex: 1, p: 3 }}>
-      <Container>
-        <Box sx={{ maxWidth: 800, mx: "auto" }}>
-          <Outlet />
-        </Box>
+      <Container maxWidth="md">
+        <Outlet />
       </Container>
     </Box>
     <Footer />

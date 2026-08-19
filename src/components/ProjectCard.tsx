@@ -1,8 +1,9 @@
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import {
-  Button,
   Card,
-  CardActions,
+  CardActionArea,
   CardContent,
+  Stack,
   Typography,
 } from "@mui/material";
 import { useNavigate } from "react-router-dom";
@@ -17,8 +18,6 @@ const ProjectCard = ({ project }: { project: Project }) => {
       sx={{
         width: "100%",
         height: "100%",
-        display: "flex",
-        flexDirection: "column",
         bgcolor: "background.paper",
         color: "white",
         transition: "transform 0.2s ease, box-shadow 0.2s ease",
@@ -28,26 +27,38 @@ const ProjectCard = ({ project }: { project: Project }) => {
         },
       }}
     >
-      <CardContent sx={{ flexGrow: 1 }}>
-        <ProjectLabel type={project.type} />
-        <Typography gutterBottom variant="h5" component="div">
-          {project.title}
-        </Typography>
-        <Typography variant="body2" color="gray">
-          {project.description}
-        </Typography>
-      </CardContent>
-      <CardActions>
-        <Button
-          size="small"
-          sx={{ color: "primary.main" }}
-          onClick={() => {
-            navigate(project.path);
+      <CardActionArea
+        onClick={() => navigate(project.path)}
+        sx={{ height: "100%", display: "flex", alignItems: "stretch" }}
+      >
+        <CardContent
+          sx={{
+            flexGrow: 1,
+            display: "flex",
+            flexDirection: "column",
+            height: "100%",
           }}
         >
-          Learn More
-        </Button>
-      </CardActions>
+          <ProjectLabel type={project.type} />
+          <Typography gutterBottom variant="h5" component="div">
+            {project.title}
+          </Typography>
+          <Typography variant="body2" color="text.secondary" sx={{ flexGrow: 1 }}>
+            {project.description}
+          </Typography>
+          <Stack
+            direction="row"
+            alignItems="center"
+            spacing={0.5}
+            sx={{ color: "primary.main", mt: 2 }}
+          >
+            <Typography variant="body2" fontWeight={600}>
+              Learn More
+            </Typography>
+            <ArrowForwardIcon fontSize="small" />
+          </Stack>
+        </CardContent>
+      </CardActionArea>
     </Card>
   );
 };

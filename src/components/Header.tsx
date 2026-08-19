@@ -8,7 +8,15 @@ const Header = () => {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm")); // <600px
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "background.default" }}>
+    <AppBar
+      position="static"
+      elevation={0}
+      sx={{
+        bgcolor: "background.default",
+        borderBottom: "1px solid",
+        borderColor: "divider",
+      }}
+    >
       <Toolbar>
         <Link to={"/"} aria-label="Devroic home">
           <img

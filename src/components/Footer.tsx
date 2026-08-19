@@ -8,7 +8,8 @@ const Footer = () => (
     component="footer"
     sx={{
       py: 2,
-      borderTop: "1px solid #333",
+      borderTop: "1px solid",
+      borderColor: "divider",
       bgcolor: "background.default",
       textAlign: "center",
     }}
@@ -36,14 +37,14 @@ const Footer = () => (
       </IconButton>
       <IconButton
         component="a"
-        href="mailto:andreas.eracleous99@hotmail.com"
+        href="mailto:info@devroic.com"
         aria-label="Send an email"
         sx={{ color: "primary.main", p: 0.5 }}
       >
         <EmailIcon fontSize="small" />
       </IconButton>
     </Stack>
-    <Typography variant="caption" color="gray">
+    <Typography variant="caption" color="text.secondary">
       © {new Date().getFullYear()} Andreas Eracleous
     </Typography>
   </Box>

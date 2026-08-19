@@ -103,7 +103,7 @@ List<Person> londoners = client.selectWhere(
 
 client.updateById("1", updatedPerson);
 client.deleteById("1");`}</CodeBlock>
-      <Typography variant="body2" color="gray">
+      <Typography variant="body2" color="text.secondary">
         selectAll, selectKey(s), selectByKey, updateKey, updateWhere,
         deleteAll and deleteByKey round out the API - see the{" "}
         <Link

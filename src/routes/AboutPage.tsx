@@ -1,27 +1,28 @@
 import { alpha, Box, Chip, Stack, Typography } from "@mui/material";
 import PageTitle from "../components/PageTitle";
+import { colors } from "../constants/colors";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
 const skillGroups: { label: string; skills: string[]; color: string }[] = [
   {
     label: "Languages",
     skills: ["TypeScript", "Java", "Python"],
-    color: "#64b5f6",
+    color: colors["Java Library"],
   },
   {
     label: "Web & Backend",
     skills: ["React", "Spring Boot", "FastAPI", "Node.js"],
-    color: "#81c784",
+    color: colors["Web Application"],
   },
   {
     label: "Mobile",
     skills: ["React Native", "Expo"],
-    color: "#ba68c8",
+    color: colors["Mobile Application"],
   },
   {
     label: "Machine Learning",
     skills: ["PyTorch", "Ultralytics YOLOv8"],
-    color: "#ffb74d",
+    color: colors["Machine Learning"],
   },
   {
     label: "Tools & Infra",

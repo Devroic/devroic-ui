@@ -1,27 +1,32 @@
-import { Box, Chip, Stack, Typography } from "@mui/material";
+import { alpha, Box, Chip, Stack, Typography } from "@mui/material";
 import PageTitle from "../components/PageTitle";
 import useDocumentTitle from "../hooks/useDocumentTitle";
 
-const skillGroups: { label: string; skills: string[] }[] = [
+const skillGroups: { label: string; skills: string[]; color: string }[] = [
   {
     label: "Languages",
     skills: ["TypeScript", "Java", "Python"],
+    color: "#64b5f6",
   },
   {
     label: "Web & Backend",
     skills: ["React", "Spring Boot", "FastAPI", "Node.js"],
+    color: "#81c784",
   },
   {
     label: "Mobile",
     skills: ["React Native", "Expo"],
+    color: "#ba68c8",
   },
   {
     label: "Machine Learning",
     skills: ["PyTorch", "Ultralytics YOLOv8"],
+    color: "#ffb74d",
   },
   {
     label: "Tools & Infra",
     skills: ["Docker", "Maven", "Git"],
+    color: "#4dd0e1",
   },
 ];
 
@@ -67,16 +72,26 @@ const AboutPage = () => {
         <Typography variant="h6" gutterBottom>
           Skills
         </Typography>
-        <Stack spacing={2}>
+        <Stack spacing={2.5}>
           {skillGroups.map((group) => (
             <Box key={group.label}>
-              <Typography
-                variant="body2"
-                color="text.secondary"
-                sx={{ mb: 1 }}
-              >
-                {group.label}
-              </Typography>
+              <Stack direction="row" alignItems="center" spacing={1} sx={{ mb: 1 }}>
+                <Box
+                  sx={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: "50%",
+                    bgcolor: group.color,
+                  }}
+                />
+                <Typography
+                  variant="body2"
+                  color="text.secondary"
+                  sx={{ fontWeight: 600, letterSpacing: 0.3 }}
+                >
+                  {group.label}
+                </Typography>
+              </Stack>
               <Stack direction="row" spacing={1} useFlexGap flexWrap="wrap">
                 {group.skills.map((skill) => (
                   <Chip
@@ -84,10 +99,11 @@ const AboutPage = () => {
                     label={skill}
                     size="small"
                     sx={{
-                      bgcolor: "background.paper",
-                      color: "white",
+                      bgcolor: alpha(group.color, 0.12),
+                      color: group.color,
+                      fontWeight: 600,
                       border: "1px solid",
-                      borderColor: "divider",
+                      borderColor: alpha(group.color, 0.4),
                     }}
                   />
                 ))}

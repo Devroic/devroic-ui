@@ -7,13 +7,16 @@ const ProjectLabel = ({ type }: { type: ProjectType }) => {
     <Box
       sx={{
         display: "inline-block",
+        alignSelf: "flex-start",
         bgcolor: colors[type],
         color: "white",
-        px: 1.5,
-        py: 0.5,
+        px: 1.25,
+        py: 0.4,
         borderRadius: "12px",
-        fontSize: "0.75rem",
-        fontWeight: 500,
+        fontSize: "0.7rem",
+        fontWeight: 600,
+        letterSpacing: 0.3,
+        textTransform: "uppercase",
         mb: 1.5,
       }}
     >

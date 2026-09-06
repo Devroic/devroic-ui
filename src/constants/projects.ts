@@ -2,6 +2,13 @@ import { Project } from "./interfaces";
 
 export const projects: Project[] = [
   {
+    title: "Chasry",
+    description:
+      "A SaaS web app that chases unpaid invoices for you - log an invoice and Chasry sends automatic, polite reminder emails to your client that escalate in tone until you get paid.",
+    path: "/chasry",
+    type: "Web Application",
+  },
+  {
     title: "JsonLite",
     description:
       "JsonLite is a lightweight Java library designed to simplify the process of working with JSON data in Java applications.",
